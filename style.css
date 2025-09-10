@@ -1,0 +1,795 @@
+  @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+  #inlinestylinglikeseriously {
+      width: 45%;
+      float: left;
+  }
+
+  .buttonsendemail {
+      width: 45%;
+      float: left;
+  }
+
+  @media screen and (max-width: 600px) {
+      #inlinestylinglikeseriously {
+          width: 100%;
+          float: left;
+      }
+  }
+
+  /* POP-UP MODAL CSS */
+  .modalcds {
+      display: none;
+      position: fixed;
+      z-index: 99;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 5px;
+  }
+
+  .modalContentcds {
+      position: relative;
+      background-image: url(https://s7d5.scene7.com/is/image/CanadianTire/ct-2020-premier-top-100-colours-pop-up-desktop-EN?wid=900&hei=520&qlt=100);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-origin: border-box;
+      /* width: 900px; */
+      height: 400px;
+      margin: auto;
+      /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+      -webkit-animation-name: animatetopcds;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetopcds;
+      animation-duration: 0.4s;
+      animation-delay: 0;
+      border-radius: 5px;
+  }
+
+  .modalClosecds {
+      color: #0D1117;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+      padding: 10px 20px;
+      width: 400px;
+  }
+
+  .modalClosecds:hover,
+  .modalClosecds:focus {
+      color: #333333;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+  .modalBtncds {
+      position: absolute;
+      color: #ffff;
+      float: right;
+      font-size: 16px;
+      font-weight: bold;
+      padding: 18px 25px;
+      bottom: 25px;
+      left: 600px;
+      margin: auto;
+      background-color: #0D1117;
+      border-radius: 5px;
+  }
+
+  .modalBtncds:hover {
+      background-color: #333333;
+  }
+
+
+  @-webkit-keyframes animatetopcds {
+      from {
+          top: -300px;
+          opacity: 0
+      }
+
+      to {
+          top: 0;
+          opacity: 1
+      }
+  }
+
+  @keyframes animatetopcds {
+      from {
+          top: -300px;
+          opacity: 0
+      }
+
+      to {
+          top: 0;
+          opacity: 1
+      }
+  }
+
+
+
+  @media screen and (max-width: 600px) {
+      .modalContentcds {
+          position: relative;
+          background-image: url(https://s7d5.scene7.com/is/image/CanadianTire/ct-2020-premier-top-100-colours-pop-up-mobile-EN?wid=331&hei=564&qlt=90);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-origin: border-box;
+          width: 331px;
+          height: 564px;
+
+      }
+
+      .modalBtncds {
+          bottom: 35px;
+          left: 53px;
+          position: absolute;
+      }
+  }
+
+
+
+  html,
+  body {
+      font-family: "Lato", sans-serif;
+      background-color: #0D1117;
+  }
+
+
+  .wrappercds {
+      max-width: 1170px;
+      margin: auto;
+      /* margin-bottom: 80px;*/
+
+  }
+
+
+
+  /* Drop Down */
+
+  .filterNavcds {
+      background-color: #181f2a;
+      width: 100%;
+      display: inline-block;
+      overflow: hidden;
+      border-radius: 5px;
+  }
+
+  .firstNavTilecds {
+      color: #ffffff !important;
+      font-size: 25px !important;
+      font-weight: bold;
+      margin: 0 !important;
+      margin-top: 18px !important;
+      float: left;
+      padding: 0 20px;
+  }
+
+  .filterNavcds p {
+      cursor: pointer;
+      float: left;
+      display: block;
+      color: #ffffff;
+      text-align: center;
+      padding: 0 30px;
+      margin-top: 20px;
+      text-decoration: none;
+      font-size: 17px;
+      border-radius: 5px;
+  }
+
+  .filterNavcds p:hover,
+  .filterNavcds p.selected {
+      color: #ffffff;
+      font-weight: bold;
+  }
+
+
+  .active {
+      color: #ffffff;
+      font-weight: bold;
+  }
+
+  .filterNavcds .filterIconcds {
+      display: none;
+  }
+
+  .filterDrpdwncds {
+      float: left;
+      overflow: hidden;
+  }
+
+  .filterDrpdwncds .filterDrpdwnBtncds {
+      font-size: 17px;
+      border: none;
+      outline: none;
+      margin: 0;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px 30px;
+      text-decoration: none;
+      font-size: 17px;
+      background-color: #181f2a
+  }
+
+  .filterDrpdwnContentcds {
+      display: none;
+      position: absolute;
+      background-color: #181f2a;
+      min-width: 220px;
+      z-index: 5;
+  }
+
+  .filterDrpdwnContentcds p {
+      float: none;
+      color: #ffffff;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+      padding: 0 16px;
+  }
+
+  .filterNavcds p:hover,
+  .filterDrpdwncds:hover .filterDrpdwnBtncds {
+      color: #ffffff;
+      font-weight: bold;
+  }
+
+  .filterDrpdwnContentcds p:hover {
+      color: #ffffff;
+      font-weight: bold;
+  }
+
+  .filterDrpdwncds:hover .filterDrpdwnContentcds {
+      display: block;
+  }
+
+
+  @media screen and (max-width: 1100px) {
+
+
+      .filterNavcds p:not(:first-child),
+      .filterDrpdwncds .filterDrpdwnBtncds {
+          display: none;
+      }
+
+      .filterNavcds a.filterIconcds {
+          float: right;
+          display: block;
+          color: #ffffff;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+          font-size: 20px;
+
+      }
+
+
+      .filterNavcds.filterResponsivecds {
+          position: relative;
+      }
+
+      .filterNavcds.filterResponsivecds .filterIconcds {
+          position: absolute;
+          right: 0;
+          top: 0;
+      }
+
+      .filterNavcds.filterResponsivecds p {
+          float: none;
+          display: block;
+          text-align: left;
+          padding: 10px 20px;
+          margin: 0;
+          clear: both;
+      }
+
+      .filterNavcds.filterResponsivecds .filterDrpdwncds {
+          float: none;
+      }
+
+      .filterNavcds.filterResponsivecds .filterDrpdwnContentcds {
+          position: relative;
+      }
+
+      .filterNavcds.filterResponsivecds .filterDrpdwncds .filterDrpdwnBtncds {
+          display: block;
+          width: 100%;
+          text-align: left;
+          background-color: #0D1117;
+          padding: 10px 20px;
+      }
+
+      .firstNavTilecds {
+          margin: 20px 0px !important;
+          clear: both;
+          font-size: 18px !important;
+          padding: 0 10px;
+      }
+  }
+
+  /*-------Tile Hover And Tile PR-Code----------*/
+
+  /*Clear floats after the columns */
+  .colorSwatchDivcds:after {
+      content: "";
+      display: block;
+      clear: both;
+  }
+
+  .colorSwatchDivcds {
+      margin: auto;
+      height: 810px;
+      font-size: 0;
+  }
+
+  .colorTilecds {
+      background-color: #0D1117;
+      transition: transform .2s;
+      width: 167px;
+      width: 14.25%;
+      /* max-width: 167px;*/
+      padding: 7px;
+      float: left;
+      position: relative;
+      box-sizing: border-box;
+      font-size: 16px;
+      border-radius: 5px 5px 0 0;
+  }
+
+  .colorTilecds:hover {
+      -ms-transform: scale(1.1);
+      /* IE 9 */
+      -webkit-transform: scale(1.1);
+      /* Safari 3-8 */
+      transform: scale(1.1);
+      box-shadow: 0 0 10px #3333;
+      z-index: 1;
+      background-color: #181f2a;
+  }
+
+  .colorTileContentcds {
+      transition: transform .2s;
+      width: 100%;
+      height: 100px;
+      margin: 0 auto;
+      position: relative;
+      top: 0px;
+      font-size: 16px;
+      border-radius: 3px;
+  }
+
+  .colorTiletextcds {
+      background-color: #181f2a;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      /*box-shadow: 0 0 10px #3333;*/
+      width: 92%;
+      left: 0;
+      padding: 7px;
+      color: #ffffff;
+      font-size: 18px;
+      border-radius: 0 0 5px 5px;
+  }
+
+  .colorTiletextcds p {
+      padding: 0;
+      margin: 0;
+  }
+
+  .colorTilecds:hover .colorTiletextcds {
+      display: block;
+      z-index: 1;
+      background-color: #181f2a;
+  }
+
+  .nohover:hover {
+      background-color: #0D1117;
+      display: none;
+      position: absolute;
+      z-index: 1;
+      /*box-shadow: 0 0 10px #3333;*/
+      width: 100%;
+      left: 0;
+      padding: 7px;
+  }
+
+
+  .fa-thumb-tack {
+      color: #0D1117;
+      opacity: 0.5;
+      font-size: 20px;
+      float: right;
+      position: relative;
+      top: 10px;
+      margin: 0 10px;
+      z-index: 1;
+      transform: rotate(45deg);
+  }
+
+  .fa-thumb-tack-selectedcds {
+      opacity: 1;
+  }
+
+
+
+  @media only screen and (max-width: 1000px) {
+
+      .colorTilecds {
+          background-color: #0D1117;
+          transition: transform .2s;
+          width: 167px;
+          width: 20%;
+          padding: 7px;
+          float: left;
+          position: relative;
+          box-sizing: border-box;
+      }
+  }
+
+
+  @media only screen and (max-width: 600px) {
+
+      .colorTilecds {
+          background-color: #0D1117;
+          transition: transform .2s;
+          width: 167px;
+          width: 50%;
+          padding: 7px;
+          float: left;
+          position: relative;
+          box-sizing: border-box;
+      }
+  }
+
+
+
+
+
+
+
+  /*-------form Style-----*/
+
+  .formHidecds {
+      display: none;
+      clear: both;
+      height: 80%;
+      background-color: #0D1117;
+      border-radius: 4px;
+      padding: 0 10px;
+      top: 100px;
+      position: relative;
+      box-sizing: border-box;
+      -webkit-animation: fadein 1.5s;
+      /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 1.5s;
+      /* Firefox less then 16 */
+      -ms-animation: fadein 1.5s;
+      /* Internet Explorer */
+      -o-animation: fadein 1.5s;
+      /* Opera less then 12.1 */
+      animation: fadein 1.5s;
+  }
+
+  @media screen and (max-width: 600px) {
+      .formHidecds {
+          height: 147% !important;
+      }
+  }
+
+  .formHidecds section {
+      padding: 7px;
+      box-sizing: border-box
+  }
+
+  .formSendEmailBtncds {
+      text-decoration: none;
+  }
+
+  .formHidecds input[type=text] {
+      width: 100%;
+      padding: 15px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #0D1117;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #ffffff;
+      font-size: 16px;
+  }
+
+  .formHidecds button {
+      width: 100%;
+      background-color: #1f6eeb;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 16px;
+  }
+
+  .formHidecds button:hover {
+      background-color: #1b5dc8;
+  }
+
+
+  .formField50 {
+      width: 45%;
+      float: left;
+  }
+
+  .formField60 {
+      width: 60%;
+      float: left;
+  }
+
+  .formField40 {
+      width: 40%;
+      float: left;
+  }
+
+  .formField20 {
+      width: 20%;
+      float: left;
+  }
+
+  .formField30 {
+      width: 25%;
+      float: left;
+  }
+
+  .formField100 {
+      width: 100%;
+      float: left;
+  }
+
+  @media screen and (max-width: 600px) {
+
+      .formField50,
+      .formField60,
+      .formField40,
+      .formField20,
+      .formField30 {
+          width: 100%;
+          float: left;
+      }
+
+      .formField100 {
+          width: 100%;
+          float: left;
+      }
+  }
+
+  /*--------------------*/
+
+
+
+  /*------------rtr Banner------------*/
+  .rtrBannercds {
+      display: none;
+      width: 100%;
+      height: 87px;
+      margin: 5px 0;
+  }
+
+  .rtrBannercds p {
+      color: #ffffff;
+      font-size: 18px;
+      text-align: left;
+      padding: 15px;
+  }
+
+  .rtrBannercds b {
+      font-size: 20px;
+  }
+
+  .rtrBannercds-2 {
+      display: none;
+      width: 100%;
+      height: 87px;
+      margin: 5px 0;
+  }
+
+
+  .rtrBannercds-2 p {
+      color: #fff;
+      font-size: 18px;
+      text-align: left;
+      padding: 15px;
+  }
+
+  .rtrBannercds-2 b {
+      font-size: 20px;
+  }
+
+  a {
+      text-decoration: none;
+  }
+
+  .rtrBannercds .single-line-text-cds {
+      padding-top: 20px;
+      padding-right: 10px;
+  }
+
+  @media screen and (max-width: 600px) {
+      .rtrBannercds .single-line-text-cds {
+          padding-top: 90px;
+      }
+
+  }
+
+  .learnmore-line-text-cds {
+      font-weight: bold;
+      float: right;
+      padding-right: 30px;
+  }
+
+  .withouttitle-line-text-cds {
+      padding-top: 25px;
+  }
+
+
+
+
+  @media screen and (max-width: 600px) {
+      .rtrBannercds {
+          display: none;
+          width: 100%;
+          height: 223px;
+          margin: 5px;
+      }
+
+      .rtrBannercds p {
+          color: #ffffff;
+          font-size: 16px;
+          text-align: center;
+          padding: 15px;
+          padding-top: 100px;
+      }
+
+      .rtrBannercds b {
+          text-align: center;
+          padding: 40px;
+          float: none;
+      }
+
+      .rtrBannercds-2 {
+          display: none;
+          height: 288px;
+      }
+
+
+      .rtrBannercds-2 p {
+          color: #0D1117;
+          font-size: 16px;
+          text-align: center;
+          padding: 24px;
+          padding-top: 155px;
+      }
+
+      .rtrBannercds-2 b {
+          text-align: center;
+          padding: 40px;
+          float: none;
+      }
+
+      .withouttitle-line-text-cds {
+          padding-top: 100px;
+      }
+
+      .learnmore-line-text-cds {
+          font-weight: bold;
+          float: none;
+          text-align: center
+      }
+
+  }
+
+
+  /*--------------get SWATCHES DELIVERED button css-------------*/
+  .getSwatchDeliveredBtncds {
+      /* background-image: url("https://media-www.canadiantire.ca/banners/category-content/2022/canadiantire-ca-tools-hardware-2022-/premier-colour-selector-tool-order-now-en.png"); */
+      cursor: pointer;
+      background-color: #1f6eeb;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      font-weight: bolder;
+      z-index: 11;
+      border-radius: 15px;
+  }
+
+  .getSwatchDeliveredBtncds p {
+      padding: 20px;
+      color: #ffffff;
+  }
+
+  /*-----------------blueAlertMessagecds-----------------*/
+
+  .blueAlertMessagecds {
+      display: none;
+      background-color: #1f6eeb;
+      color: #0D1117;
+      font-size: 18px;
+      padding: 10px 20px;
+      clear: both;
+      margin: 10px 0;
+      -webkit-animation: fadein 1.5s;
+      /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 1.5s;
+      /* Firefox less then 16 */
+      -ms-animation: fadein 1.5s;
+      /* Internet Explorer */
+      -o-animation: fadein 1.5s;
+      /* Opera less then 12.1 */
+      animation: fadein 1.5s;
+      border-radius: 5px;
+  }
+
+  @keyframes fadein {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  /* Firefox less then 16 */
+  @-moz-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  /* Safari, Chrome and Opera > 12.1 */
+  @-webkit-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  /* Internet Explorer */
+  @-ms-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  /* Opera less then 12.1 */
+  @-o-keyframes fadein {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+  }
+
+  /*----------------------------------*/
