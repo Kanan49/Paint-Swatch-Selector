@@ -35,7 +35,7 @@
 
   .modalContentcds {
       position: relative;
-      background-image: url(https://s7d5.scene7.com/is/image/CanadianTire/ct-2020-premier-top-100-colours-pop-up-desktop-EN?wid=900&hei=520&qlt=100);
+      background-image: url('../img/pop-up-img.jpg');
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -51,8 +51,9 @@
       animation-delay: 0;
       border-radius: 5px;
   }
-
+/*
   .modalClosecds {
+    display: none;
       color: #0D1117;
       float: right;
       font-size: 28px;
@@ -69,6 +70,7 @@
   }
 
   .modalBtncds {
+    display: none;
       position: absolute;
       color: #ffff;
       float: right;
@@ -85,7 +87,7 @@
   .modalBtncds:hover {
       background-color: #333333;
   }
-
+*/
 
   @-webkit-keyframes animatetopcds {
       from {
@@ -112,7 +114,7 @@
   }
 
 
-
+/*
   @media screen and (max-width: 600px) {
       .modalContentcds {
           position: relative;
@@ -133,7 +135,7 @@
       }
   }
 
-
+*/
 
   html,
   body {
